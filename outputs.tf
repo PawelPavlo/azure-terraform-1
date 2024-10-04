@@ -1,7 +1,12 @@
+#output "rg_id" {
+#  description = "ID of the Resource Group"
+#  value       = azurerm_resource_group.main.id
+#}
+
 output "rg_id" {
-  description = "ID of the Resource Group"
-  value       = azurerm_resource_group.main.id
+  value = data.azurerm_resource_group.main.id
 }
+
 
 output "sa_blob_endpoint" {
   description = "storage account blob endpoint URL"
